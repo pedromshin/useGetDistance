@@ -1,6 +1,9 @@
 const { useRef, useLayoutEffect } = require("react/cjs/react.production.min");
 
-export default function useGetDistance(effect, elementId) {
+export default function useGetDistance(
+  effect: ({}) => void,
+  elementId: string
+) {
   const element = document.getElementById(elementId);
 
   const getNewTranslatePosition = () => {
