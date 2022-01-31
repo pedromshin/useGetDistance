@@ -1,7 +1,15 @@
 const { useRef, useLayoutEffect } = require("react/cjs/react.production.min");
 
+interface ICurrentTranslate {
+  elementToTop: number;
+}
+
+interface IUseTranslate {
+  currentTranslate: ICurrentTranslate;
+}
+
 export default function useGetDistance(
-  effect: ({}) => void,
+  effect: ({ currentTranslate }: IUseTranslate) => void,
   elementId: string
 ) {
   const element = document.getElementById(elementId);
