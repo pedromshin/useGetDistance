@@ -1,5 +1,7 @@
-function isHelloqwe(string) {
-  return string === "helloqwe";
-}
+import { IUseTranslate } from "./types";
 
-module.exports = isHelloqwe;
+function useGetDistance(
+  effect: ({ currentTranslate }: IUseTranslate) => void
+) {}
+
+module.exports = useGetDistance;
