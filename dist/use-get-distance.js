@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const { useRef, useLayoutEffect } = require("react/cjs/react.production.min");
-function useGetDistance(effect, elementId) {
+export function useGetDistance(effect, elementId) {
     const element = document.getElementById(elementId);
     const getNewTranslatePosition = () => {
         if (element === null)
@@ -23,4 +21,3 @@ function useGetDistance(effect, elementId) {
         return () => window.removeEventListener("scroll", updateTranslate);
     });
 }
-exports.useGetDistance = useGetDistance;
