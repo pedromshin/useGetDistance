@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/pedromshin/useGetDistance/issues"
   },
-  "homepage": "https://github.com/pedromshin/useGetDistance#readme"
+  "homepage": "https://github.com/pedromshin/useGetDistance#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.13"
+  }
 }
