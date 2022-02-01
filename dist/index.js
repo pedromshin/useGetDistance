@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
 const useGetDistance = (elementId) => {
+    const [elementDistance, setElementDistance] = react_1.useState({
+        elementToTop: 0,
+    });
     const getNewTranslatePosition = () => {
         if (elementId === null)
             return {
@@ -16,11 +19,12 @@ const useGetDistance = (elementId) => {
         const newTranslatePosition = getNewTranslatePosition();
         effect({ currentTranslate: newTranslatePosition });
         currentTranslate.current = newTranslatePosition;
+        setElementDistance(newTranslatePosition);
     }, []);
     react_1.useLayoutEffect(() => {
         window.addEventListener("scroll", updateTranslate);
         return () => window.removeEventListener("scroll", updateTranslate);
     });
-    return currentTranslate;
+    return elementDistance;
 };
 exports.default = useGetDistance;

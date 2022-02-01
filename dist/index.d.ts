@@ -1,5 +1,4 @@
-/// <reference types="react" />
-declare const useGetDistance: (elementId: HTMLElement) => import("react").MutableRefObject<{
+declare const useGetDistance: (elementId: HTMLElement) => {
     elementToTop: number;
-}>;
+};
 export default useGetDistance;
