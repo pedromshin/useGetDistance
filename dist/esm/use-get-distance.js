@@ -28,6 +28,9 @@ export function useGetDistance(
     return () => window.removeEventListener("scroll", updateTranslate);
   });
 } */
-export const useGetDistance = (x, y) => {
-    return x + y;
+import { useRef } from "react";
+export const useGetDistance = (x, y, elementId) => {
+    const ref = useRef(console.log("this is the ref bla bla"));
+    const endvar = console.log(x + y, elementId, ref.current);
+    return endvar;
 };

@@ -31,7 +31,10 @@ export function useGetDistance(
 } */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useGetDistance = void 0;
-const useGetDistance = (x, y) => {
-    return x + y;
+const react_1 = require("react");
+const useGetDistance = (x, y, elementId) => {
+    const ref = (0, react_1.useRef)(console.log("this is the ref bla bla"));
+    const endvar = console.log(x + y, elementId, ref.current);
+    return endvar;
 };
 exports.useGetDistance = useGetDistance;
