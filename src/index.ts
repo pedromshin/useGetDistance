@@ -21,6 +21,8 @@ const useGetDistance = (elementId: HTMLElement) => {
       effect({ currentTranslate: newTranslatePosition });
       currentTranslate.current = newTranslatePosition;
       setElementDistance(newTranslatePosition);
+      console.log("current", currentTranslate.current);
+      console.log("new", newTranslatePosition);
     },
     []
   );
