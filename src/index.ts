@@ -19,10 +19,12 @@ const useGetDistance = (elementId: HTMLElement) => {
       const newTranslatePosition = getNewTranslatePosition();
       effect({ currentTranslate: newTranslatePosition });
       currentTranslate.current = newTranslatePosition;
+      console.log(currentTranslate.current);
     };
 
     useLayoutEffect(() => {
       window.addEventListener("scroll", updateTranslate);
+      window.addEventListener("scroll", () => console.log("hi"));
 
       return () => window.removeEventListener("scroll", updateTranslate);
     });
@@ -34,8 +36,6 @@ const useGetDistance = (elementId: HTMLElement) => {
     };
     setToTop(setTranslate());
   });
-
-  return toTop;
 };
 
 export default useGetDistance;

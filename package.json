@@ -1,6 +1,6 @@
 {
   "name": "usegetdistance",
-  "version": "1.2.2",
+  "version": "1.2.21",
   "description": "distance helper",
   "main": "dist/index.js",
   "type": "commonjs",
