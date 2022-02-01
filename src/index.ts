@@ -1,1 +1,3 @@
-export { useGetDistance } from "./use-get-distance";
+import { useGetDistance } from "./use-get-distance";
+
+export { useGetDistance };

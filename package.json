@@ -1,12 +1,17 @@
 {
   "name": "usegetdistance",
-  "version": "1.1.14",
-  "description": "Helper that gets relative distances between DOM objects and viewport",
-  "files": [
-    "/dist"
-  ],
-  "main": "dist/index.ts",
-  "types": "dist/index.d.ts",
+  "version": "1.2.0",
+  "description": "distance helper",
+  "main": "dist/index.js",
+  "dependencies": {
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "object-assign": "^4.1.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,22 +21,12 @@
   },
   "keywords": [
     "distance",
-    "pixels",
-    "intersection",
-    "DOM",
-    "object",
-    "ref"
+    "intersection"
   ],
-  "author": "pkms",
+  "author": "pedromshin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pedromshin/useGetDistance/issues"
   },
-  "homepage": "https://github.com/pedromshin/useGetDistance#readme",
-  "devDependencies": {
-    "@types/node": "^17.0.13"
-  },
-  "dependencies": {
-    "react": "^17.0.2"
-  }
+  "homepage": "https://github.com/pedromshin/useGetDistance#readme"
 }

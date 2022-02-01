@@ -1,4 +1,4 @@
-const { useRef, useLayoutEffect } = require("react/cjs/react.production.min");
+/* const { useRef, useLayoutEffect } = require("react/cjs/react.production.min");
 
 export function useGetDistance(
   effect: ({ currentTranslate }) => void,
@@ -27,4 +27,8 @@ export function useGetDistance(
 
     return () => window.removeEventListener("scroll", updateTranslate);
   });
-}
+} */
+
+export const useGetDistance = (x: number, y: number) => {
+  return x + y;
+};
