@@ -1,2 +1,2 @@
-declare const useGetDistance: (elementId: HTMLElement) => number;
+declare const useGetDistance: (elementId: HTMLElement) => void;
 export default useGetDistance;
