@@ -1,9 +1,35 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
-const useGetDistance = (x, y, elementId) => {
-    const ref = react_1.useRef(console.log("this is the ref bla bla"));
-    const endvar = console.log(x + y, elementId, ref.current);
-    return endvar;
+const useGetDistance = (elementId) => {
+    const [toTop, setToTop] = react_1.useState(0);
+    const getNewTranslatePosition = () => {
+        if (elementId === null)
+            return {
+                elementToTop: 0,
+            };
+        return {
+            containerToTop: elementId.getBoundingClientRect().top,
+        };
+    };
+    const useTranslate = (effect) => {
+        const currentTranslate = react_1.useRef(getNewTranslatePosition());
+        const updateTranslate = () => {
+            const newTranslatePosition = getNewTranslatePosition();
+            effect({ currentTranslate: newTranslatePosition });
+            currentTranslate.current = newTranslatePosition;
+        };
+        react_1.useLayoutEffect(() => {
+            window.addEventListener("scroll", updateTranslate);
+            return () => window.removeEventListener("scroll", updateTranslate);
+        });
+    };
+    useTranslate(({ currentTranslate }) => {
+        const setTranslate = () => {
+            return currentTranslate.elementToTop;
+        };
+        setToTop(setTranslate());
+    });
+    return toTop;
 };
 exports.default = useGetDistance;
