@@ -18,19 +18,16 @@ const useGetDistance = (elementId) => {
             const newTranslatePosition = getNewTranslatePosition();
             effect({ currentTranslate: newTranslatePosition });
             currentTranslate.current = newTranslatePosition;
-            console.log(currentTranslate.current);
         };
         react_1.useLayoutEffect(() => {
             window.addEventListener("scroll", updateTranslate);
-            window.addEventListener("scroll", () => console.log("hi"));
             return () => window.removeEventListener("scroll", updateTranslate);
         });
     };
     useTranslate(({ currentTranslate }) => {
-        const setTranslate = () => {
-            return currentTranslate.elementToTop;
-        };
-        setToTop(setTranslate());
+        setToTop(currentTranslate.current);
+        console.log("current", currentTranslate.current);
+        console.log("to top", toTop);
     });
 };
 exports.default = useGetDistance;
