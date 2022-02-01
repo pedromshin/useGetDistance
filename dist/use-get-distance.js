@@ -29,8 +29,9 @@ export function useGetDistance(
   });
 } */
 import { useRef } from "react";
-export const useGetDistance = (x, y, elementId) => {
+const useGetDistance = (x, y, elementId) => {
     const ref = useRef(console.log("this is the ref bla bla"));
     const endvar = console.log(x + y, elementId, ref.current);
     return endvar;
 };
+export default useGetDistance;
