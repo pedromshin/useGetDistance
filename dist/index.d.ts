@@ -1,2 +1,2 @@
-declare const useGetDistance: (elementId: HTMLElement) => void;
+declare const useGetDistance: (elementId: HTMLElement, effect: ({ currentTranslate }: any) => void) => void;
 export default useGetDistance;
