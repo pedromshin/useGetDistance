@@ -1,9 +1,8 @@
 {
   "name": "usegetdistance",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "distance helper",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist/"
   ],
