@@ -1,6 +1,6 @@
 {
   "name": "usegetdistance",
-  "version": "1.2.27",
+  "version": "1.2.28",
   "description": "distance helper",
   "main": "dist/index.js",
   "type": "commonjs",
@@ -19,7 +19,8 @@
   },
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
-    "sendup": " npm run tsc && git add . && git commit"
+    "add": "npm run tsc && git add . && git commit",
+    "sendup": "git push && npm publish"
   },
   "repository": {
     "type": "git",

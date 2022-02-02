@@ -1,9 +1,9 @@
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef } from "react";
 
-const useGetDistance = (elementId: HTMLElement) => {
-  const [elementDistance, setElementDistance] = useState({
-    elementToTop: 0,
-  });
+const useGetDistance = (
+  elementId: HTMLElement,
+  effect: ({ currentTranslate }: any) => void
+) => {
   const getNewTranslatePosition = () => {
     if (elementId === null)
       return {
@@ -15,24 +15,16 @@ const useGetDistance = (elementId: HTMLElement) => {
   };
 
   const currentTranslate = useRef(getNewTranslatePosition());
-  const updateTranslate = useCallback(
-    () => (effect: ({ currentTranslate }: any) => void) => {
-      const newTranslatePosition = getNewTranslatePosition();
-      effect({ currentTranslate: newTranslatePosition });
-      currentTranslate.current = newTranslatePosition;
-      setElementDistance(newTranslatePosition);
-      console.log("current", currentTranslate.current);
-      console.log("new", newTranslatePosition);
-    },
-    []
-  );
+  const updateTranslate = () => {
+    const newTranslatePosition = getNewTranslatePosition();
+    effect({ currentTranslate: newTranslatePosition });
+    currentTranslate.current = newTranslatePosition;
+  };
 
   useLayoutEffect(() => {
     window.addEventListener("scroll", updateTranslate);
     return () => window.removeEventListener("scroll", updateTranslate);
   });
-
-  return elementDistance;
 };
 
 export default useGetDistance;
