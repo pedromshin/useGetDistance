@@ -1,7 +1,7 @@
-import { useCallback, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const useGetDistance = (
-  elementId: HTMLElement,
+  elementId: HTMLElement | null,
   effect: ({ currentTranslate }: any) => void
 ) => {
   const getNewTranslatePosition = () => {
