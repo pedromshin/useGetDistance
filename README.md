@@ -1,16 +1,16 @@
 # useGetDistance
 
-1. Installation and usage:
+Installation and usage:
 
-npm i -D usegetdistance
+    npm i -D usegetdistance
 
-2. Importing package:
+Importing package:
 
-import useGetDistance from 'usegetdistance'
+    import useGetDistance from 'usegetdistance'
 
-3. Usage:
+Usage:
 
-useGetDistance(elementId, ({currentTranslate}) => {} )
+    useGetDistance(elementId, ({currentTranslate}) => {} )
 
     Provide an elementId for the hook to calculate its distance to the top of the user's window at every scroll
     with document.getElementById('element-id').
