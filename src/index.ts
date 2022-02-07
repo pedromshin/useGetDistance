@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const useGetDistance = (
   elementId: HTMLElement | null,
@@ -21,7 +21,7 @@ const useGetDistance = (
     currentTranslate.current = newTranslatePosition;
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", updateTranslate);
     return () => window.removeEventListener("scroll", updateTranslate);
   });

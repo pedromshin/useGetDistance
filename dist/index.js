@@ -17,7 +17,7 @@ const useGetDistance = (elementId, effect) => {
         effect({ currentTranslate: newTranslatePosition });
         currentTranslate.current = newTranslatePosition;
     };
-    (0, react_1.useLayoutEffect)(() => {
+    (0, react_1.useEffect)(() => {
         window.addEventListener("scroll", updateTranslate);
         return () => window.removeEventListener("scroll", updateTranslate);
     });
