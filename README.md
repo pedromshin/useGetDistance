@@ -28,5 +28,5 @@ Example:
     const elementId = document.getElementById('container-id')
 
     useGetDistance(elementId, ({ currentTranslate }) => {
-       console.log(currentTranslate)
+       console.log(currentTranslate.elementToTop)
     });
