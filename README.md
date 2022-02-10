@@ -23,7 +23,7 @@ Example:
 
     import useGetDistance from 'usegetdistance';
 
-    document.getElementById('container-id')
+    const elementId = document.getElementById('container-id')
 
     useGetDistance(elementId, ({ currentTranslate }) => {
        console.log(currentTranslate)
