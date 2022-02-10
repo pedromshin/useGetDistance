@@ -1,5 +1,7 @@
 # useGetDistance
 
+React Hook to perfomatically calculate distances of a given HTML element at every scroll.
+
 Installation and usage:
 
     npm i -D usegetdistance
