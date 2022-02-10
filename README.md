@@ -18,3 +18,13 @@ Usage:
     Write your callback function that uses the currentTranslate.getElementToTop value provided by the hook.
     The currentTranslate.getElementToTop (type: number) value is the provided element's distance to the top
     of the user's screen.
+
+Example:
+
+    import useGetDistance from 'usegetdistance';
+
+    document.getElementById('container-id')
+
+    useGetDistance(elementId, ({ currentTranslate }) => {
+       console.log(currentTranslate)
+    });
